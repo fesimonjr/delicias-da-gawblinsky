@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    /* fundo branco simples */
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    /* reduzido para compensar o logo maior */
+    flex-direction: row;
+    border-bottom: 3px solid #c91515;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    /* fundo branco sólido */
+    height: 95px;
+    /* altura fixa do cabeçalho */
+}
+
+
+.logo {
+    height: 85px;
+    /* aumentado tamanho do logo */
+    width: auto;
+    /* mantém a proporção original da imagem */
+    margin: 5px;
+    /* reduzido margem para caber no header */
+    padding: 0;
+    object-fit: contain;
+    /* evita distorção */
+}
+
+.header-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.header-menu-item {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    /* sombra estática */
+    transition: all 0.3s ease;
+    /* suaviza hover */
+    cursor: pointer;
+    /* indica que é clicável */
+}
+
+.header-menu-item:hover {
+    font-size: 20px;
+    /* aumenta tamanho */
+    color: #c91515;
+    /* muda a cor para amarelo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    /* sombra mais intensa */
+    transform: scale(1.1);
+    /* leve aumento para destaque */
+}
+
+
+.conteudo {
+    margin-top: 95px; /* ajustado para alinhar com a altura exata do header */
+    border-top: 1.2px solid #d92525;
+    margin-bottom: 48px;
+    position: relative;
+    padding-bottom: 100px; /* aumente este valor para garantir espaço para o rodapé */
+}
+
+.conteudo-principal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.texto-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.texto-principal-escrito-titulo {
+    font-family: 'Momo Trust Display', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    /* animação suave */
+    text-align: center;
+}
+
+.texto-principal-escrito-titulo:hover {
+    transform: scale(1.1);
+    /* aumenta 10% ao passar o mouse */
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    /* sombra mais intensa */
+}
+
+.texto-principal-escrito-subtitulo {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    max-width: 500px;
+    line-height: 1.5;
+    padding-left: 35px;
+    text-align: justify;
+}
+
+.botao {
+    width: 140px;
+    height: 40px;
+    background: linear-gradient(270deg, #d92525, #f5c518, #d92525);
+    background-size: 600% 600%;
+    /* aumenta área do gradiente para animar */
+    color: #ffffff;
+    font-family: 'Momo Trust Display', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: animarGradiente 5s ease infinite;
+    /* animação contínua */
+}
+
+@keyframes animarGradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+botao:hover {
+    color: #000000;
+    /* opcional: muda a cor do texto no hover */
+}
+.bolo-capa {
+    height: 400px;
+   
+}
+.conteudo-secundario {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 24px;
+    margin-bottom: 50px;
+    /* espaço extra abaixo */
+}
+.conteudo-secundario-titulo {
+   border-top: 0.4px solid #000000;
+   padding-top: 30px;
+    font-family: 'Momo Trust Display', sans-serif;
+    font-weight: 400;
+    font-size: 22px;  
+    margin-bottom: 16px;
+}
+.conteudo-secundario-paragrafo {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.2;
+    color: #000000;
+}
+.rodape {
+    border-top: 3px solid #c91515;
+    padding: 20px 0; /* mantenha este valor ou aumente se necessário */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    text-align: center;
+    height: 80px; /* aumente a altura se necessário */
+}
+
+.rodape-redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os ícones */
+}
+
+.rodape-redes img {
+    width: 40px; /* Ajuste o tamanho dos ícones conforme necessário */
+    height: auto; /* Mantém a proporção */
+}
+
+.rodape-redes a {
+    margin: 0 10px; /* espaçamento entre ícones */
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.rodape-redes a:hover {
+    transform: scale(1.2); /* aumenta ícone no hover */
+    opacity: 0.8;           /* efeito leve de transparência */
+}
+
+.rodape-redes a:active {
+    transform: scale(1.1); /* aumenta ícone ao ser clicado */
+}
+
+.rodape-logo{
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+}
